@@ -1,11 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
+import { GlobalStyle } from '../../styles';
 
 const ProfileScreen = () => {
   return (
-    <View>
+   <SafeAreaView style={GlobalStyle.Container}>
+     <View>
       <Text>ProfileScreen</Text>
     </View>
+   </SafeAreaView>
   );
 };
 
