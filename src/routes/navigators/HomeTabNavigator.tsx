@@ -2,7 +2,7 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../../screens/home/HomeScreen';
 import ProfileScreen from '../../screens/profile/ProfileScreen';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,16 +14,43 @@ function HomeTab() {
         component={HomeScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <AntDesign name="home" size={size} color={color} />
+            <Icon name="search1" size={20} color={color} />
           ),
         }}
       />
       <Tab.Screen 
-        name="Profile" 
+        name="Favorite" 
         component={ProfileScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <AntDesign name="user" size={size} color={color} />
+            <Icon name="hearto" size={20} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen 
+        name="Trips" 
+        component={ProfileScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="car" size={20} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen 
+        name="Inbox" 
+        component={ProfileScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="message1" size={20} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen 
+        name="Others" 
+        component={ProfileScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="appstore-o" size={20} color={color} />
           ),
         }}
       />
